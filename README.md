@@ -1,6 +1,6 @@
 # ReviOS Playbook (Nightly Windows insider builds edition)
 
-![Workflow](https://github.com/Pyenb/ReviOS_playbook_nightly_insider/actions/workflows/release.yml/badge.svg)
+![Workflow](https://github.com/Pyenb/ReviOS_playbook_nightly_insider/actions/workflows/main.yml/badge.svg)
 ![Downloads](https://img.shields.io/github/downloads/Pyenb/ReviOS_playbook_nightly_insider/total.svg)
 
 This is a fork of the original [ReviOS Playbook](https://github.com/meetrevision/playbook), with support for the latest Windows Insider builds and nightly builds.
