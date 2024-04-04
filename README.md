@@ -17,8 +17,6 @@ Just head over to the [Releases](https://github.com/Pyenb/ReviOS_playbook_nightl
 
 ## (New) System Requirements
 
-These are all Windows 11, 23H2.
-
 ![CANARY](https://img.shields.io/badge/Canary%20Channel-26100-blue)
 ![DEV](https://img.shields.io/badge/Dev%20Channel-26100-green)
 ![BETA](https://img.shields.io/badge/Beta%20Channel-22635-orange)
