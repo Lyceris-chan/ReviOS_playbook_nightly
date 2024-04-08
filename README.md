@@ -32,7 +32,7 @@ Just head over to the [Releases](https://github.com/Pyenb/ReviOS_playbook_nightl
 See the documentation for more information:
 
 - [Playbook](https://www.revi.cc/docs/playbook/general)
-- [Installing Windows](https://www.revi.cc/docs/playbook/installstock)
+- [Installing Windows](https://www.revi.cc/docs/playbook/installwindows)
 - [Installing & Updating ReviOS](https://www.revi.cc/docs/playbook/install)
 - [FAQ](https://www.revi.cc/docs/faq)
 
