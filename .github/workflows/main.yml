@@ -66,13 +66,10 @@ jobs:
   
       - name: Run script and set outputs
         run: |
-          $ErrorActionPreference = "Stop"
-          try {
-            python get_versions.py
-            echo "CANARY=$(python get_versions.py | awk 'NR==1{print $1}')" >> $env:GITHUB_ENV
-            echo "DEV=$(python get_versions.py | awk 'NR==2{print $1}')" >> $env:GITHUB_ENV
-            echo "BETA=$(python get_versions.py | awk 'NR==3{print $1}')" >> $env:GITHUB_ENV
-          }
+          python get_versions.py
+          echo "CANARY=$(python get_versions.py | awk 'NR==1{print $1}')" >> $env:GITHUB_ENV
+          echo "DEV=$(python get_versions.py | awk 'NR==2{print $1}')" >> $env:GITHUB_ENV
+          echo "BETA=$(python get_versions.py | awk 'NR==3{print $1}')" >> $env:GITHUB_ENV
 
       - name: Replace versions in playbook.conf
         if: success()
