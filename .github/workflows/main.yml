@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '30 0 * * *'
 
 env:
   SXSC_REPO: 'https://github.com/Atlas-OS/sxsc'
