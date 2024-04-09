@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 0 * * *'
 
 env:
   SXSC_REPO: 'https://github.com/Atlas-OS/sxsc'
@@ -74,11 +72,6 @@ jobs:
             echo "CANARY=$(python get_versions.py | awk 'NR==1{print $1}')" >> $env:GITHUB_ENV
             echo "DEV=$(python get_versions.py | awk 'NR==2{print $1}')" >> $env:GITHUB_ENV
             echo "BETA=$(python get_versions.py | awk 'NR==3{print $1}')" >> $env:GITHUB_ENV
-          } catch {
-            echo "Script execution failed, setting defaults"
-            echo "CANARY=26063" >> $env:GITHUB_ENV
-            echo "DEV=26058" >> $env:GITHUB_ENV
-            echo "BETA=22635" >> $env:GITHUB_ENV
           }
 
       - name: Replace versions in playbook.conf
