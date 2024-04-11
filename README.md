@@ -1,6 +1,6 @@
 <h1 align="center">
 
-ReviOS Playbook📜
+ReviOS Playbook (Nightly insider edition)📜
 
 ---
 
@@ -15,32 +15,20 @@ ReviOS Playbook📜
 [![Discord](https://img.shields.io/discord/619835916139364383?label=Revision%20Discord&color=D50000&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzMzLjMzMyIgaGVpZ2h0PSIxMzMzLjMzMyIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48ZGVmcz48Y2xpcFBhdGggaWQ9IkEiPjxwYXRoIGQ9Ik0wIDEwMDBoMTAwMFYwSDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI0EpIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMzMzMyAwIDAgLTEuMzMzMzMzIDAgMTMzMy4zMzMzKSI+PGcgZmlsbD0iIzliMDAwMCI+PHBhdGggZD0iTTYxNC43MjQgNjIyLjQ2Yy0uOTA5LTQ1LjQtMjYuMDItODQuODYtNjIuOTQ5LTEwNnYtLjAxYy0xOC4yOC0xMC40Ny0zOS40NS0xNi40NS02Mi4wMjEtMTYuNDVoLTcyLjgzbC0xNTcuMTEgMjcyLjEyYzEzLjEtMTMuNjMgMzEuNTItMjIuMTIgNTEuOTItMjIuMTJoMTc2LjU0YzcwLjI3IDAgMTI3Ljg2LTU3LjI5IDEyNi40NS0xMjcuNTQiLz48cGF0aCBkPSJNNzM2LjIwNCAxMjVoLTg4LjkyYy04LjU3IDAtMTYuNDkgNC41Ny0yMC43OCAxMmwtMTM3LjQxIDIzOC4wMUw0MTYuOTI0IDUwMGg3Mi44M2MyMi41NyAwIDQzLjc0IDUuOTggNjIuMDIgMTYuNDVsNjIuMDUtMTA3LjQ3TDc1Ni45OTQgMTYxYzkuMjQtMTYtMi4zMTEtMzYtMjAuNzktMzYiLz48L2c+PHBhdGggZD0iTTQxNi45MzQgNzUwaC0xMDUuMmMtMjAuNCAwLTM4LjgyIDguNDktNTEuOTIgMjIuMTJsLS4wMS4wMS04LjA0IDEzLjk0Yy0xMy43NCAyMy44MS01LjU4IDU0LjI1IDE4LjIyIDY4bDIyLjA0IDEyLjcyYzIzLjgxIDEzLjc1IDU0LjI1IDUuNTkgNjgtMTguMjJ6IiBmaWxsPSIjYjcxYzFjIi8+PHBhdGggZD0iTTczOS43NDQgNjI2LjAxYy4zNy05Mi4zMy01MC43My0xNzMuNDMtMTI1LjkyLTIxNy4wMjktMzYuODYtMjEuMzgxLTc5LjUyLTMzLjczMS0xMjQuNzMtMzMuOTcxbC0xLjM3LS4wMWgtOTguOThjLTEzLjI1IDAtMjMuOTktMTAuNzQtMjMuOTktMjMuOTlWMTQ5LjA4YzAtMTMuMjk5LTEwLjc5LTI0LjA4LTI0LjA4LTI0LjA4aC03Ni44NGMtMTMuMyAwLTI0LjA4IDEwLjc5LTI0LjA4IDI0LjA5VjQyOGMwIDM5Ljc3IDMyLjIzIDcyIDcyIDcyaDE3OGMyMi41NyAwIDQzLjc0IDUuOTggNjIuMDIgMTYuNDV2LjAxYzM2LjkzIDIxLjE0IDYyLjA0IDYwLjYgNjIuOTQ5IDEwNkM2MTYuMTM0IDY5Mi43MSA1NTguNTQ0IDc1MCA0ODguMjc0IDc1MGgtMTc2LjU0Yy0yMC40IDAtMzguODIgOC40OS01MS45MiAyMi4xMmwtLjAxLjAxYy0xMi40MiAxMi45NC0yMC4wNSAzMC41LTIwLjA1IDQ5Ljg1djI4Ljk0YzAgMTMuMyAxMC43OCAyNC4wOCAyNC4wOCAyNC4wOGgyMjUuOTJjMTM3LjczIDAgMjQ5LjQ1LTExMS4zOCAyNDkuOTktMjQ4Ljk5IiBmaWxsPSIjZDUwMDAwIi8+PC9nPjwvc3ZnPg==)](https://discord.gg/962y4pU)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/meetrevision)
 
-</div>
-
-ReviOS is a customized version of Windows, designed to be lightweight, stable, and focused on improving performance, privacy and compatibility. It aspires to re-create what Windows as an operating system should have been - easy and simple. Now compatible with [AME Wizard](https://ameliorated.io)🧙.
-
-## ✨ Key Features
-
-- 🎯 Easy to use, just drag and drop the playbook into [AME Wizard](https://ameliorated.io)
-- 🗑 Removes bloatware and unnecessary system components
-- ⚡ Optimizes your system for performance and improved privacy
-- 🔧 Integrates the [Revision Tool](https://github.com/meetrevision/revision-tool) to customize your system further
-
-For more detailed information, see our documentation [here](https://www.revi.cc/docs/faq/before/features).
-# ReviOS Playbook (Nightly Windows insider builds edition)
-
 ![Workflow](https://github.com/Pyenb/ReviOS_playbook_nightly_insider/actions/workflows/main.yml/badge.svg)
 ![sync](https://github.com/Pyenb/ReviOS_playbook_nightly_insider/actions/workflows/sync.yml/badge.svg)
 
+</div>
+
 This is a fork of the original [ReviOS Playbook](https://github.com/meetrevision/playbook), with support for the latest Windows Insider builds and nightly builds.
+
+## Where to get the forked version
 
 > [!CAUTION]
 > The nightly builds are not tested and may not work. **Use at your own risk.**
 
 > [!WARNING]
 > ReviOS does not officially support Windows Insider builds. **Use at your own risk.**
-
-## Where to get the forked version
 
 Just head over to the [Releases](https://github.com/Pyenb/ReviOS_playbook_nightly_insider/releases/latest) page, download the playbook and follow the original instructions.
 
@@ -50,7 +38,7 @@ Just head over to the [Releases](https://github.com/Pyenb/ReviOS_playbook_nightl
 ![DEV](https://img.shields.io/badge/Dev%20Channel-26100-green)
 ![BETA](https://img.shields.io/badge/Beta%20Channel-22635-orange)
 
-## Latest Windows Insider Builds
+## 👷 Latest Windows Insider Builds
 
 - [Canary Channel](https://aka.ms/canarychannellatest)
 - [Dev Channel](https://aka.ms/DevLatest)
@@ -65,7 +53,7 @@ Explore the documentation for more information:
 - [Installing & Updating ReviOS](https://www.revi.cc/docs/playbook/install)
 - [FAQ](https://www.revi.cc/docs/faq)
 
-## FAQ
+## ❓ FAQ
 
 <details><summary>Why does this fork exist?</summary>
 
