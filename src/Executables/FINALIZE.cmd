@@ -33,7 +33,7 @@ if not defined w11 (
 
 echo Configuring power settings
 powercfg /hibernate off
-@REM powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+powercfg -restoredefaultschemes
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 3ff9831b-6f80-4830-8178-736cd4229e7b
 powercfg -changename 3ff9831b-6f80-4830-8178-736cd4229e7b "Revision - Ultra Performance" "Windows's Ultimate Performance with additional changes."
 powercfg -s 3ff9831b-6f80-4830-8178-736cd4229e7b
@@ -117,7 +117,7 @@ for /f "usebackq tokens=2 delims=\" %%a in (`reg query "HKEY_USERS" ^| findstr /
 :: https://github.com/meetrevision/playbook/issues/15
 :: Updates root certificates
 
-echo Updating root certificates
+::echo Updating root certificates
 
-PowerShell -NonInteractive -NoLogo -NoP -C "& {$tmp = (New-TemporaryFile).FullName; CertUtil -generateSSTFromWU -f $tmp; if ( (Get-Item $tmp | Measure-Object -Property Length -Sum).sum -gt 0 ) { $SST_File = Get-ChildItem -Path $tmp; $SST_File | Import-Certificate -CertStoreLocation "Cert:\LocalMachine\Root"; $SST_File | Import-Certificate -CertStoreLocation "Cert:\LocalMachine\AuthRoot" } Remove-Item -Path $tmp}" >NUL 2>nul
+::PowerShell -NonInteractive -NoLogo -NoP -C "& {$tmp = (New-TemporaryFile).FullName; CertUtil -generateSSTFromWU -f $tmp; if ( (Get-Item $tmp | Measure-Object -Property Length -Sum).sum -gt 0 ) { $SST_File = Get-ChildItem -Path $tmp; $SST_File | Import-Certificate -CertStoreLocation "Cert:\LocalMachine\Root"; $SST_File | Import-Certificate -CertStoreLocation "Cert:\LocalMachine\AuthRoot" } Remove-Item -Path $tmp}" >NUL 2>nul
 
