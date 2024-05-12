@@ -1,13 +1,14 @@
-name: Archive and Release
+name: Archive and release
 
 on:
+  workflow_dispatch:
   push:
-    tags:
-      - '*'
+    branches:
+      - main
 
 env:
-    SXSC_REPO: 'https://github.com/Atlas-OS/sxsc'
-    FILENAME: 'Revi-PB-${{ github.ref_name }}.apbx'
+  SXSC_REPO: 'https://github.com/Atlas-OS/sxsc'
+  FILENAME: 'Revi-PB-nightly.apbx'
 
 jobs:
   build:
@@ -19,19 +20,16 @@ jobs:
 
       - name: Update version
         run: |
-          $version = "${{ github.ref_name }}"
+          $version = "1.0"
           $playbookConfPath = "src\playbook.conf"
           $finalizeCMDPath = "src\Executables\FINALIZE.cmd"
 
           (Get-Content -Path $playbookConfPath) -replace '<Version>.*</Version>', "<Version>$version</Version>" | Set-Content -Path $playbookConfPath
-
           (Get-Content -Path $finalizeCMDPath) -replace 'set version=.+', "set version=$version" | Set-Content -Path $finalizeCMDPath
         shell: pwsh
 
-        # Credits to echnobas, Atlas and all the contributors.
       - name: Git clone sxsc
-        run: |
-          git clone --depth=1 ${{ env.SXSC_REPO }} sxsc-src
+        run: git clone --depth=1 ${{ env.SXSC_REPO }} sxsc-src
 
       - name: Build cab
         run: |
@@ -47,36 +45,50 @@ jobs:
             .\clean.bat
           }
         working-directory: sxsc-src
-        #
-      
+
       - name: Archive content
-        run: |
-          7z a -pmalte -mhe=on ${{ env.FILENAME }} ./src/*
+        run: 7z a -pmalte -mhe=on ${{ env.FILENAME }} ./src/*
 
       - name: Generate SHA256
         run: |
           $hash = (Get-FileHash -Algorithm SHA256 -Path ${{ env.FILENAME }}).Hash
           echo ("HASH=" + $hash) >> $env:GITHUB_ENV
-      
-      # - name: DevUploads
-      #   run: |
-      #     url=$(bash <(curl -s https://devuploads.com/upload.sh) -f "${{ env.FILENAME }}" -k "${{ secrets.DEVUPLOADS_API_KEY }}" | grep -o 'https://devuploads.com[^"]*')
-      #     echo "DEVUPLOADS=$url" >> $GITHUB_ENV
 
       - name: Release
+        if: success()
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ secrets.TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ env.FILENAME }}
           asset_name: ${{ env.FILENAME }}
           tag: ${{ github.ref }}
+          release_name: 🌙 ReviOS nightly build
           overwrite: true
           body: |
-            # Download Link ✨
+            ```
+            /* 
+            * This is an unofficial ReviOS nightly build 
+            * 
+            * I am not responsible for bricked devices, strained relationships, 
+            * thermonuclear war, or you getting fired because the alarm app failed. Please 
+            * do some research if you have any concerns about features included in this playbook 
+            * before installing it! YOU are choosing to make these modifications, and if 
+            * you point the finger at me for messing up your device, I will laugh at you. 
+            */
+            ```
 
-            If you would like to support Revision, kindly download the Playbook from the provided link below.
+            ## ⚠️ This is an unofficial ReviOS nightly build which means you'll get no support from the person providing it nor the ReviOS team. ⚠️
 
-            📌Link: 
-            
+            ## 💻 System Requirements
+
+            ReviOS Playbook currently supports ARM64 and AMD64 builds of the following Windows versions:
+
+            - Windows 10 21H2 `19044` (LTSC)
+            - Windows 10 22H2 `19045`
+            - Windows 11 22H2 `22621`
+            - Windows 11 23H2 `22631`
+            - Windows 11 24H2 `26100`
+
+            Any other build **is not** supported.
+
             SHA256: `${{ env.HASH }}`
-            
